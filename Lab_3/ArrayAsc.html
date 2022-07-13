@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Array_in_AscendingOrder</title>
+</head>
+<body>
+	<script type="text/javascript">
+		n = parseInt(prompt("Enter size of Array: "));
+		myArray = [];
+		console.log("Array Elements you Entered:");
+		for (let i = 0; i < n; i++) {
+			myArray[i] = parseInt(prompt("Enter "+(i+1)+ " Number"));
+		}
+		console.log(myArray);
+
+		s = myArray.sort(function (a,b){return (a-b)});
+
+		console.log("Array After Sorting(Ascending): ");
+		console.log(s);
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Occurence_of_'a'_Word</title>
+</head>
+<body>
+	<script type="text/javascript">
+		s = prompt("Enter String");
+
+		n = s.toLowerCase();
+		fst = n.indexOf('a');
+		lst = n.lastIndexOf('a');
+		
+		console.log("First position of 'a': "+fst);
+		console.log("First position of 'a': "+lst);
+		console.log("Remaining String: "+n.substring(fst+1 , lst));
+	</script>
+</body>
+</html>
