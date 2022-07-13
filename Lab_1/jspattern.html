@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS PATTERN-1</title>
+	<style type="text/css">
+		body{
+
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		n=8;	
+
+
+
+		for(i=1;i<=n;i++){
+			for(j=1;j<=n;j++){
+				document.write("* ");
+			}
+			document.write("<br/>");
+
+		}
+
+			document.write("<br/>");
+			document.write("<br/>");
+			document.write("<br/>");
+
+//=====================================================================================
+
+		for(i=1;i<=n;i++){
+			for(j=1;j<=n;j++){
+				if(i==1 || i==n || j==1 || j==n){
+					document.write("* ");
+				}
+				else{
+					document.write("\xa0 \xa0");
+				}
+			}
+			document.write("<br/>");
+
+		}
+
+			document.write("<br/>");
+			document.write("<br/>");
+			document.write("<br/>");
+
+//=====================================================================================
+
+		for(i=1;i<=n;i++){
+			for(k=1;k<=(n-i);k++){
+				document.write("\xa0");
+			}
+			for(j=1;j<=i;j++){
+				if(i==1 || i==n || j==1 || j==i){
+					document.write("* ");
+				}
+				else{
+					document.write("\xa0\xa0\xa0");
+				}
+			}
+			document.write("<br/>");
+
+		}
+			document.write("<br/>");
+			document.write("<br/>");
+			document.write("<br/>");
+
+
+//=====================================================================================
+
+		for(i=1;i<n;i++){
+			for(k=1;k<=(n-i);k++){
+				document.write("\xa0");
+			}
+			for(j=1;j<=i;j++){
+				if(i==1 || i==n || j==1 || j==i){
+					document.write("*");
+				}
+				else{
+					document.write("\xa0\xa0");
+				}
+			}
+			document.write("<br/>");
+
+		}
+		for(i=1;i<=n;i++){
+			for(k=1;k<=i;k++){
+				document.write("\xa0");
+			}
+			for(j=1;j<=(n-i);j++){
+				if(i==n || j==1 || j==(n-i)){
+					document.write("*");
+				}
+				else{
+					document.write("\xa0\xa0");
+				}
+			}
+			document.write("<br/>");
+
+		}
+			document.write("<br/>");
+			document.write("<br/>");
+			document.write("<br/>");
+
+//=====================================================================================
+
+		for(i=1;i<=n;i++){	
+			for(j=1;j<=i;j++){
+				if(i==1 || i==n || j==1 || j==i){
+					document.write("* ");
+				}
+				else{
+					document.write("\xa0\xa0\xa0");
+				}
+			}
+			document.write("<br/>");
+
+		}
+			document.write("<br/>");
+			document.write("<br/>");
+			document.write("<br/>");
+
+//=====================================================================================
+
+		
+		for(i=1;i<=n;i++){	
+			for(k=1;k<=(n-i);k++){
+				document.write("\xa0\xa0\xa0");
+			}
+			for(j=1;j<=i;j++){
+				if(i==1 || i==n || j==1 || j==i){
+					document.write("* ");
+				}
+				else{
+					document.write("\xa0\xa0\xa0");
+
+				}
+			}
+			document.write("<br/>");
+
+		}
+	</script>
+</body>
+</html>
