@@ -1,0 +1,33 @@
+<!-- program to check an Armstrong number of three digits -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ARMSTRONG</title>
+</head>
+<body>
+<script type="text/javascript">
+	n = prompt("Enter Number: ");
+	len = n.length;
+	n = parseInt(n);
+	sum=0;
+	temp = n;
+
+	while(n>0)
+	{
+		rem=n%10;
+		sum=sum+Math.pow(rem,len);
+		n=parseInt(n/10);
+	}
+	if (sum==temp)
+	{
+		console.log("The number "+temp+" is armstrong ");
+	}
+	else
+	{
+		console.log("The number " +temp+ " is not armstrong");
+	}
+</script>
+</body>
+</html>
