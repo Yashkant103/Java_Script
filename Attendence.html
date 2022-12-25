@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Attendence</title>
+	<style type="text/css">
+		.No{
+			width: 100px;
+			float: left;
+			margin: 25px 10px;
+			border: 2px dashed olive;
+			border-radius: 10px;
+			padding: 20px;
+		}
+		.output{
+		  width: 100vh;
+		  position: fixed; 
+		  margin-left: 500px;
+		}
+		.label{
+			font-size: 25px;
+			color: darkred;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		#display{
+			border: 3px solid red;
+			border-radius: 5px;
+			min-height: 20vh;
+			padding: 20px;
+			text-align: justify;
+		}
+		button{
+			margin: 20px 55px;
+			height: 8vh;
+			width: 100px;
+			border-radius: 15px;
+			background-color: lightcyan;
+		}
+	</style>
+</head>
+<body>
+		<button onclick="checkall()">check all</button>
+		<button onclick="uncheckall()">uncheck all</button></br>
+		<div>
+			
+			<div class="No">
+				<h2>Class A:</h2>
+				<div id="A"></div>
+			</div>
+			<div class="No">
+				<h2>Class B:</h2>
+				<div id="B"></div>
+			</div>
+			<div class="No">
+				<h2>Class C:</h2>
+				<div id="C"></div>
+			</div>
+		</div>
+		<div class = "output">
+			<div class="label">Absenties</div>
+			<div id="display">
+			&nbsp;</div>
+		</div>
+		<script type="text/javascript">
+
+			var a = document.getElementById("A");
+			var b = document.getElementById("B");
+			var c = document.getElementById("C");
+
+			function classA(start,end) {
+				for (var i = start; i <= end; i++) {
+					a.innerHTML += "<input type='checkbox' onclick='check()'>" + "<span>"+i+"</span></br>"; 
+				}
+			}
+			function classB(start,end) {
+				for (var i = start; i <= end; i++) {
+					b.innerHTML += "<input type='checkbox' onclick='check()'>" + "<span>"+i+"</span></br>"; 
+				}
+			}
+			function classC(start,end) {
+				for (var i = start; i <= end; i++) {
+					c.innerHTML += "<input type='checkbox' onclick='check()'>" + "<span>"+i+"</span></br>"; 
+				}
+			}
+			classA(101,165);
+			classB(201,285);
+			classC(301,363);
+			function checkall() {
+				temp = document.getElementsByTagName('input');
+				for (var i = 0; i < temp.length; i++) {
+					temp[i].checked=true;
+				}
+				document.getElementById('display').innerHTML='&nbsp;';
+			}
+			function uncheckall() {
+				temp = document.getElementsByTagName('input');
+				for (var i = 0; i < temp.length; i++) {
+					temp[i].checked=false;
+				}
+				check();
+			}
+			function check() {
+				temp2 = document.getElementById("display");
+				temp3 = document.getElementsByTagName('span');
+				temp2.innerHTML = '';
+				var tr = '';
+				temp = document.getElementsByTagName('input');
+				for (var i = 0; i < temp.length; i++) {
+					 if (temp[i].checked==false){
+					 		tr += temp3[i].innerHTML+', ';
+					 }
+					 temp2.innerHTML = tr.substring(0, tr.length-2);
+				}
+			}
+		</script>
+</body>
+</html>
